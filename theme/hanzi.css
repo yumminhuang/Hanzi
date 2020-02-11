@@ -244,6 +244,33 @@ table tbody tr:last-child td, table tbody tr:last-child th {
 	padding-bottom: 6px
 }
 
+ruby rtc rt {
+	display: inline;
+	font-size:inherit
+}
+
+ruby.mps, ruby.zhuyin {
+	display: ruby;
+	-webkit-ruby-position: inter-character;
+	ruby-position:inter-character
+}
+
+ruby.mps > rt, ruby.zhuyin > rt {
+	-moz-transform: scale(.8);
+	-ms-transform: scale(.8);
+	-webkit-transform: scale(.8);
+	transform: scale(.8);
+	-moz-transform-origin: left center;
+	-ms-transform-origin: left center;
+	-webkit-transform-origin: left center;
+	transform-origin: left center;
+	font-size:.5em
+}
+
+ruby.mps > rt:empty, ruby.zhuyin > rt:empty {
+	display:none
+}
+
 code, .md-fences {
 	padding: .5em;
 	border: 1px solid #ccc;
